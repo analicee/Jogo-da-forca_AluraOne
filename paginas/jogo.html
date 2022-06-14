@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/jogo.css">
+    <title>Alura Jogo da Forca</title>
+</head>
+
+<body onload="iniciarJogo()">
+    <header>
+        <img src="../src/img/svgLogo.svg" alt="Logo">
+    </header>
+    <div class="container">
+        <main class="center">
+            <canvas id="canvas" width="300" height="200"></canvas>
+            <h2></h2>
+            <div class="letras container">
+            </div>
+
+            <div class="letraerrada">
+                <span class="wrongletter"></span>
+
+            </div>
+            <div class="container">
+
+                <button class="color" onClick="document.location.reload(true);">Novo Jogo</button>
+                <button id="desistir">Desistir</button>
+
+            </div>
+
+        </main>
+
+    </div>
+    <footer>
+        <div class="container">
+
+            &copy; 2022 - Analice da mota
+
+        </div>
+    </footer>
+
+    <script>
+        let c = document.getElementById("canvas")
+        if (c.getContext) {
+            var ctx = canvas.getContext('2d')
+
+            ctx.beginPath();
+
+            ctx.lineWidth = 5
+            ctx.strokeStyle = "#0A3871";
+            ctx.moveTo(0, 195);
+            ctx.lineTo(300, 195);
+
+            ctx.moveTo(50, 5);
+            ctx.lineTo(50, 195);
+
+            ctx.moveTo(48, 5)
+            ctx.lineTo(153, 5)
+
+            ctx.moveTo(150, 5)
+            ctx.lineTo(150, 25)
+            ctx.stroke();
+            ctx.closePath()
+            ctx.beginPath()
+        }
+    </script>
+
+</body>
+
+</html>
